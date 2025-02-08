@@ -1,16 +1,21 @@
 @font-face {
-  font-family: "DM-Sans";
-  src: url(/ASSETS/Fonts/DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.ttf);
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: regular;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "Libre-Baskerville";
-  src: url(/ASSETS/Fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf);
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-@font-face {
-  font-family: "Nunito";
-  src: url(/ASSETS/Fonts/Nunito/Nunito-VariableFont_wght.ttf);
+.nunito-<uniquifier> {
+  font-family: "Nunito", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
