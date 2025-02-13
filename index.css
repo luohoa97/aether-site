@@ -107,6 +107,31 @@ body {
             color: #ccc;
             margin-bottom: 1rem;
         }
+
+.feature ul li {
+    margin: 10px 0;
+    color: #ddd;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.feature ul li::before {
+    content: "> ";
+    color: #8402FD;
+    font-weight: bold;
+    position: absolute;
+    left: -20px;
+    transition: transform 0.3s ease;
+}
+
+.feature ul li:hover {
+    transform: rotateY(11deg);
+}
+
+.feature ul li:hover::before {
+    transform: translateZ(5px);
+}
+
         .feature ul {
             list-style-type: none;
             padding-left: 0;
