@@ -1,30 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AETHER</title>
-    <link rel="stylesheet" href="index.css">
-  </head>
-  <body>
-    <header>
-      <h1>AETHER.</h1>
-    </header>
-    <nav id="nav">
-      <a href="#">Home.</a>
-      <a href="credits.html">Credits.</a>
-      <a href="contribute.html">Contribute.</a>
-      <a href="download.html">Download.</a>
-      <a href="faq.html">FAQ.</a>
-    </nav>
-    <section class="sect0">
-      
-    </section>
-    <footer>
-      <div class="Center">
-        <h4>Copyright 2025 AETHER - All Rights Reserved.</h4>
-        <p>please check the <a href="credits.html">Credits</a></p>
-      </div>
-  </body>
-    <script src="index.js"></script>
-</html>
+    <title>Aether Programming Language</title>
+    <!-- this is probably why no one uses comments in html, and css, pretty self explainatory -->
+</head>
+<body>
+<nav id="navbar">
+    <div class="nav-logo">
+        <span>A</span>
+    </div>
+    <ul>
+        <li><a href="#get-started">Get Started</a></li>
+        <li><a href="#documentation">Documentation</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#forum">Forum</a></li>
+    </ul>
+</nav>
+<div class="content" id="get-started">
+    <h1>Aether Programming Language</h1>
+    <p>Powerful, elegant, and open. Designed for developers who demand control and precision.</p>
+</div>
+<section class="features" id="features">
+    <div class="feature">
+        <h3>Efficient</h3>
+        <ul>
+            <li>Aether generates native LLVM IR for cross-platform performance</li>
+            <li>Supports multiple front ends including LLVM, IR, AST, and CST</li>
+            <li>Syntax derived from Lua, easy to grasp and efficient</li>
+        </ul>
+    </div>
+    <div class="feature">
+        <h3>Easy Modification</h3>
+        <ul>
+            <li>Modular internal components for personalized tool development</li>
+            <li>Great flexibility for developers who need custom solutions</li>
+        </ul>
+    </div>
+    <div class="feature">
+        <h3>Open</h3>
+        <ul>
+            <li>Codebase is readable and designed for easy navigation</li>
+            <li>Encourages community contributions and collaboration</li>
+            <li>Open source with a free-to-modify license (Attribution-ShareAlike)</li>
+        </ul>
+    </div>
+</section>
+<section class="cta" id="cta">
+    <p>Join our community and start building with Aether today.</p>
+    <p><a href="https://github.com/AetherLang" target="_blank">Fork Aether on GitHub</a></p>
+</section>
+<footer id="forum">
+    <p>© 2025 Aether Programming Language. All rights reserved.</p>
+</footer>
+
+<script>
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+    const footer = document.getElementById('contact');
+
+    window.addEventListener('scroll', function() {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > lastScrollTop) {
+            navbar.style.transform = 'translateY(-100%)';
+            footer.style.transform = 'translateY(100%)';
+        } else {
+            navbar.style.transform = 'translateY(0)';
+            footer.style.transform = 'translateY(0)';
+        }
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+</script>
+</body></html>
