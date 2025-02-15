@@ -65,6 +65,7 @@
                 const link = document.querySelector('a[href="https://github.com/The-baremetal/FLUXASSEMBLY"]');
                 if (link) {
                     link.textContent = `Fork ${version}`;
+                    link.href = `https://github.com/The-baremetal/FLUXASSEMBLY/releases/tag/${latestTag}`;
                 }
             }
         })
