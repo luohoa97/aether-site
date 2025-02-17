@@ -1,94 +1,159 @@
-<html lang="en"><head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <title>Aether Programming Language</title>
     <!-- this is probably why no one uses comments in html, and css, pretty self explainatory -->
-</head>
-<body>
-<nav id="navbar">
-    <div class="nav-logo">
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="nav-logo">
         <span>A</span>
+      </div>
+      <ul>
+        <li>
+          <a href="#get-started">Get Started</a>
+        </li>
+        <li>
+          <a href="#documentation">Documentation</a>
+        </li>
+        <li>
+          <a href="#download">Download</a>
+        </li>
+        <li>
+          <a href="https://aether.flarum.cloud/">Forum</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="content" id="get-started">
+      <h1>Aether Programming Language</h1>
+      <p>Powerful, elegant, and open. Designed for developers who demand control and precision.</p>
+      <label for="tryaether">Try Aether's <b>elegant syntax</b>
+      </label>
+      <div class="tryaether" id="tryaether">
+        <label for="examples">Choose an example</label>
+        <select name="Examples" id="examples">
+          <optgroup label="Beginners">
+            <option value="hello">Hello World</option>
+            <option value="variableland">Variable land</option>
+          </optgroup>
+          <optgroup label="Ametuer">
+            <option value="atm">Banking app</option>
+            <option value="server">Aether server & routing</option>
+          </optgroup>
+        </select>
+        <code id="example">Loading</code>
+      </div>
     </div>
-    <ul>
-        <li><a href="#get-started">Get Started</a></li>
-        <li><a href="#documentation">Documentation</a></li>
-        <li><a href="#download">Download</a></li>
-        <li><a href="https://aether.flarum.cloud/">Forum</a></li>
-    </ul>
-</nav>
-<div class="content" id="get-started">
-    <h1>Aether Programming Language</h1>
-    <p>Powerful, elegant, and open. Designed for developers who demand control and precision.</p>
-</div>
-<section class="features" id="features">
-    <div class="feature">
-        <h3>Efficient</h3>
+    <section class="features" id="features">
+      <div class="feature">
+        <b>
+          <h3>Efficient</h3>
+        </b>
         <ul>
-            <li>Aether generates native LLVM IR for cross-platform performance</li>
-            <li>Supports multiple front ends including LLVM, IR, AST, and CST</li>
-            <li>Syntax derived from Lua, easy to grasp and efficient</li>
+          <li>Aether generates native LLVM IR for cross-platform performance</li>
+          <li>Supports multiple front ends including LLVM, IR, AST, and CST</li>
+          <li>Syntax derived from Lua, easy to grasp and efficient</li>
         </ul>
-    </div>
-    <div class="feature">
-        <h3>Easy Modification</h3>
+      </div>
+      <div class="feature">
+        <b>
+          <h3>Easy Modification</h3>
+        </b>
         <ul>
-            <li>Modular internal components for personalized tool development</li>
-            <li>Great flexibility for developers who need custom solutions</li>
+          <li>Modular internal components for personalized tool development</li>
+          <li>Great flexibility for developers who need custom solutions</li>
         </ul>
-    </div>
-    <div class="feature">
-        <h3>Open</h3>
+      </div>
+      <div class="feature">
+        <b>
+          <h3>Open</h3>
+        </b>
         <ul>
-            <li>Codebase is readable and designed for easy navigation</li>
-            <li>Encourages community contributions and collaboration</li>
-            <li>Open source with a free-to-modify license (Attribution-ShareAlike)</li>
+          <li>Codebase is readable and designed for easy navigation</li>
+          <li>Encourages community contributions and collaboration</li>
+          <li>Open source with a free-to-modify license (Attribution-ShareAlike)</li>
         </ul>
-    </div>
-</section>
-<section class="cta" id="community">
-    <p>Join our community and start building with Aether today.</p>
-    <p><a href="https://discord.com/(i seriously forgot)" target="_"blank">Discord server</p>
-    <p><a href="https://reddit.com/(i seriously forgot)" target="_"blank">Reddit community</p>
-    <p><a href="https://github.com/The-baremetal/FLUXASSEMBLY/tree/main" target="_blank">Aether Repository</a></p>
-    <p><a href="https://github.com/The-baremetal/FLUXASSEMBLY/fork" target="_blank">Fork Aether on GitHub</a></p>
-</section>
-<footer id="forum">
-    <p>© 2025 Aether Programming Language. All rights reserved.</p>
-</footer>
-
-<script>
-    fetch('https://api.github.com/repos/The-baremetal/FLUXASSEMBLY/tags')
-        .then(response => response.json())
-        .then(data => {
-            if (data.length > 0) {
-                const latestTag = data[0].name;
-                const version = latestTag.split('_')[0].replace('Vortex-', '');
-                const link = document.querySelector('a[href="https://github.com/The-baremetal/FLUXASSEMBLY/fork"]');
-                if (link) {
-                    link.textContent = `Fork ${version}`;
-                    link.href = `https://github.com/The-baremetal/FLUXASSEMBLY/releases/tag/${latestTag}`;
-                }
-            }
-        })
-        .catch(error => console.error('Error fetching tags:', error));
-</script>
-<script>
-    let lastScrollTop = 0;
-    const navbar = document.getElementById('navbar');
-    const footer = document.getElementById('contact');
-
-    window.addEventListener('scroll', function() {
+      </div>
+    </section>
+    <section class="cta" id="community">
+      <p>Join our community and start building with Aether today.</p>
+      <p>
+        <a href="https://discord.gg/Tyab3ETZds" target="_blank">Discord server
+      </p>
+      <p>
+        <a href="https://www.reddit.com/r/AetherProject/" target="_blank">Reddit community
+      </p>
+      <p>
+        <a href="https://github.com/The-baremetal/FLUXASSEMBLY/tree/main" target="_blank">Aether Repository</a>
+      </p>
+      <p>
+        <a href="https://github.com/The-baremetal/FLUXASSEMBLY/fork" target="_blank">Fork Aether on GitHub</a>
+      </p>
+    </section>
+    <footer id="forum">
+      <p>© 2025 Aether Programming Language. All rights reserved.</p>
+    </footer>
+    <script>
+      var helloworld = 'print("Hello World")';
+      var variableland = 'local player = ["i am smth"]';
+      var atm = 'local balance = 1000\nprint("Welcome to your bank. Balance: " .. balance)';
+      var server = 'local server = require("websockets")\nasync function routefunc()\n  print("routed")\nend\nserver:start()\nserver:route(routefunc)';
+      const examplesSelect = document.getElementById('examples');
+      const codeDisplay = document.getElementById('example');
+      examplesSelect.addEventListener('change', function() {
+        let selectedValue = examplesSelect.value;
+        switch (selectedValue) {
+          case 'hello':
+            codeDisplay.textContent = helloworld;
+            break;
+          case 'variableland':
+            codeDisplay.textContent = variableland;
+            break;
+          case 'atm':
+            codeDisplay.textContent = atm;
+            break;
+          case 'server':
+            codeDisplay.textContent = server;
+            break;
+          default:
+            codeDisplay.textContent = 'Select an example to see the code here';
+        }
+      });
+      window.onload = function() {
+        examplesSelect.dispatchEvent(new Event('change'));
+      };
+    </script>
+    <script>
+      fetch('https://api.github.com/repos/The-baremetal/FLUXASSEMBLY/tags').then(response => response.json()).then(data => {
+        if (data.length > 0) {
+          const latestTag = data[0].name;
+          const version = latestTag.split('_')[0].replace('Vortex-', '');
+          const link = document.querySelector('a[href="https://github.com/The-baremetal/FLUXASSEMBLY/fork"]');
+          if (link) {
+            link.textContent = `Fork ${version}`;
+            link.href = `https://github.com/The-baremetal/FLUXASSEMBLY/releases/tag/${latestTag}`;
+          }
+        }
+      }).catch(error => console.error('Error fetching tags:', error));
+    </script>
+    <script>
+      let lastScrollTop = 0;
+      const navbar = document.getElementById('navbar');
+      const footer = document.getElementById('contact');
+      window.addEventListener('scroll', function() {
         let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
         if (currentScroll > lastScrollTop) {
-            navbar.style.transform = 'translateY(-100%)';
-            footer.style.transform = 'translateY(100%)';
+          navbar.style.transform = 'translateY(-100%)';
+          footer.style.transform = 'translateY(100%)';
         } else {
-            navbar.style.transform = 'translateY(0)';
-            footer.style.transform = 'translateY(0)';
+          navbar.style.transform = 'translateY(0)';
+          footer.style.transform = 'translateY(0)';
         }
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-    });
-</script>
-</body></html>
+      });
+    </script>
+  </body>
+</html>
