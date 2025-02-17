@@ -47,9 +47,12 @@
         </ul>
     </div>
 </section>
-<section class="cta" id="cta">
+<section class="cta" id="community">
     <p>Join our community and start building with Aether today.</p>
-    <p><a href="https://github.com/The-baremetal/FLUXASSEMBLY" target="_blank">Fork Aether on GitHub</a></p>
+    <p><a href="https://discord.com/(i seriously forgot)" target="_"blank">Discord server</p>
+    <p><a href="https://reddit.com/(i seriously forgot)" target="_"blank">Reddit community</p>
+    <p><a href="https://github.com/The-baremetal/FLUXASSEMBLY/tree/main" target="_blank">Aether Repository</a></p>
+    <p><a href="https://github.com/The-baremetal/FLUXASSEMBLY/fork" target="_blank">Fork Aether on GitHub</a></p>
 </section>
 <footer id="forum">
     <p>© 2025 Aether Programming Language. All rights reserved.</p>
@@ -62,7 +65,7 @@
             if (data.length > 0) {
                 const latestTag = data[0].name;
                 const version = latestTag.split('_')[0].replace('Vortex-', '');
-                const link = document.querySelector('a[href="https://github.com/The-baremetal/FLUXASSEMBLY"]');
+                const link = document.querySelector('a[href="https://github.com/The-baremetal/FLUXASSEMBLY/fork"]');
                 if (link) {
                     link.textContent = `Fork ${version}`;
                     link.href = `https://github.com/The-baremetal/FLUXASSEMBLY/releases/tag/${latestTag}`;
